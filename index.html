@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Whack-a-Mole</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="game-panel">
+            <h1>🐭 WHACK·A·MOLE 🐭</h1>
+            <div style="text-align:center;"><span class="sub">⚡ POP! SMACK! ⚡</span></div>
+
+            <div class="stats">
+                <div class="score-box">🎯 <span>SCORE</span> <span class="score-value" id="scoreDisplay">0</span></div>
+                <div class="miss-box">💢 <span>MISS</span> <span class="miss-value" id="missDisplay">0</span></div>
+                <div class="difficulty-box">⚙️ <span>SPEED</span>
+                    <select id="difficultySelect">
+                        <option value="900">🐢 SLOW (0.9s)</option>
+                        <option value="650" selected>⚡ NORMAL (0.65s)</option>
+                        <option value="450">🔥 FAST (0.45s)</option>
+                        <option value="300">💀 INSANE (0.3s)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="holes-grid" id="holesGrid">
+                <!-- 9 holes will be injected via js -->
+            </div>
+
+            <div class="controls">
+                <button id="resetGameBtn">🔄 NEW GAME</button>
+            </div>
+            <div class="message-area" id="gameMessage">
+                👊 Click the moles! Avoid missing too many.
+            </div>
+            <footer>⭐ whack fast → more points! miss 15 = game over ⭐</footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
